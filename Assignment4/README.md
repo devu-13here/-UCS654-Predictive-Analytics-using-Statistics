@@ -84,3 +84,9 @@
     </div>
 </body>
 </html>
+
+![meanshift_results](https://github.com/user-attachments/assets/930eac6d-0d12-48a5-b3b7-0dd89391000f)
+
+![kmeans_results](https://github.com/user-attachments/assets/8fd4cf40-a0e0-4084-a417-3397495bbb4c)
+
+![hierarchical_results](https://github.com/user-attachments/assets/ac0bc470-5c19-4132-9628-bfa2630108aa)
