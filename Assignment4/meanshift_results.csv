@@ -1,0 +1,7 @@
+Preprocessing,Clusters,Bandwidth,Silhouette,Calinski-Harabasz,Davies-Bouldin
+No Processing,2,0.9095,0.69,510.0,0.39
+Normalization,3,0.2761,0.48,290.0,0.76
+Transform,3,0.2073,0.57,969.0,0.63
+PCA,3,0.783,0.56,615.0,0.56
+T+N,3,0.2643,0.54,278.0,0.67
+T+N+PCA,4,0.2223,0.42,256.0,0.74

@@ -1,0 +1,19 @@
+Preprocessing,Clusters,Silhouette,Calinski-Harabasz,Davies-Bouldin
+No Processing,3,0.55,558.0,0.66
+No Processing,4,0.49,515.0,0.8
+No Processing,5,0.48,488.0,0.82
+Normalization,3,0.5,349.0,0.75
+Normalization,4,0.43,301.0,0.85
+Normalization,5,0.35,272.0,0.91
+Transform,3,0.57,974.0,0.63
+Transform,4,0.5,787.0,0.72
+Transform,5,0.43,671.0,0.84
+PCA,3,0.6,689.0,0.56
+PCA,4,0.54,674.0,0.65
+PCA,5,0.55,666.0,0.65
+T+N,3,0.48,406.0,0.77
+T+N,4,0.42,348.0,0.88
+T+N,5,0.32,323.0,1.0
+T+N+PCA,3,0.53,504.0,0.59
+T+N+PCA,4,0.5,479.0,0.62
+T+N+PCA,5,0.41,476.0,0.72
