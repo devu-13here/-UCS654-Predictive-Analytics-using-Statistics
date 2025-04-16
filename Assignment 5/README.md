@@ -1,86 +1,94 @@
 ![image](https://github.com/user-attachments/assets/32cbae4c-16a9-45df-a5fe-744295323663)
 
-  <h1>Optimized SVM on UCI Multi-Class Dataset</h1>
+
+
+  <h1>📊 SVM Optimization on Dry Bean Dataset</h1>
 
   <h2>📌 Objective</h2>
-  <p>To implement and optimize a Support Vector Machine (SVM) classifier on a multi-class dataset from the UCI Machine Learning Repository using parameter tuning and convergence analysis.</p>
-
-  <h2>📂 Dataset</h2>
   <p>
-    Dataset: <strong>Letter Recognition</strong><br>
-    Source: <a href="https://archive.ics.uci.edu/ml/datasets/letter+recognition" target="_blank">UCI Repository</a><br>
-    Size: 20,000+ rows<br>
-    Classes: 26 (A to Z)
+    The goal of this project is to optimize a Support Vector Machine (SVM) classifier for the
+    <strong>Dry Bean Dataset</strong> from the UCI Machine Learning Repository using various SVM parameters and analyze the convergence of model performance.
   </p>
 
-  <h2>🧪 Task Breakdown</h2>
+  <h2>📂 Dataset Info</h2>
   <ul>
-    <li>Split dataset into 10 different random samples (each with 70% training and 30% testing).</li>
-    <li>Run SVM optimization for 100 iterations on each sample.</li>
-    <li>Test different SVM parameters: <strong>Kernel</strong>, <strong>Nu</strong>, <strong>Epsilon</strong>.</li>
-    <li>Record the best accuracy and parameters per sample.</li>
-    <li>Plot convergence graph of the most accurate sample.</li>
-    <li>Perform basic data analysis (shape, nulls, class distribution).</li>
+    <li><strong>Name:</strong> Dry Bean Dataset</li>
+    <li><strong>Source:</strong> <a href="https://archive.ics.uci.edu/ml/datasets/Dry+Bean+Dataset" target="_blank">UCI ML Repository</a></li>
+    <li><strong>Instances:</strong> 13,611</li>
+    <li><strong>Features:</strong> 16 numerical</li>
+    <li><strong>Classes:</strong> 7 types of beans</li>
   </ul>
 
-  <h2>🔍 Optimization Strategy</h2>
-  <p>
-    Used <code>NuSVC</code> from <strong>scikit-learn</strong> with random sampling of parameters:<br>
-    Kernels: linear, rbf, poly, sigmoid<br>
-    Nu: range from 0.01 to 1<br>
-    Epsilon: range from 0.01 to 1 (stored but not used directly in NuSVC)<br>
-  </p>
+  <h2>🧪 Project Steps</h2>
+  <ol>
+    <li>Loaded and analyzed the Dry Bean dataset.</li>
+    <li>Split the dataset into 10 randomized samples (70% train, 30% test).</li>
+    <li>Ran 100 iterations of SVM optimization per sample, varying:
+      <ul>
+        <li>Kernel: linear, rbf, poly, sigmoid</li>
+        <li>Nu: 0.01 to 1</li>
+        <li>Epsilon: 0.01 to 1 (tracked but not used in NuSVC)</li>
+      </ul>
+    </li>
+    <li>Recorded the best accuracy and parameters for each sample.</li>
+    <li>Plotted a convergence graph for the most accurate sample.</li>
+    <li>Saved all results to CSV.</li>
+  </ol>
 
-  <h2>📈 Results</h2>
-  <p>Saved in <code>svm_optimization_results.csv</code></p>
-
-  <h3>Sample Table Format</h3>
+  <h2>📈 Sample Result Table Format</h2>
   <table>
-    <tr>
-      <th>Sample #</th>
-      <th>Best Accuracy (%)</th>
-      <th>Kernel</th>
-      <th>Nu</th>
-      <th>Epsilon</th>
-    </tr>
-    <tr>
-      <td>S1</td>
-      <td>94.2</td>
-      <td>rbf</td>
-      <td>0.5</td>
-      <td>0.1</td>
-    </tr>
-    <!-- More rows populated by script -->
+    <thead>
+      <tr>
+        <th>Sample</th>
+        <th>Best Accuracy (%)</th>
+        <th>Kernel</th>
+        <th>Nu</th>
+        <th>Epsilon</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>S1</td>
+        <td>91.65</td>
+        <td>rbf</td>
+        <td>0.33</td>
+        <td>0.18</td>
+      </tr>
+      <!-- Remaining rows filled dynamically by the script -->
+    </tbody>
   </table>
 
   <h2>📊 Convergence Graph</h2>
-  <p>Shows accuracy improvements over 100 iterations for the best-performing sample.</p>
+  <p>
+    A convergence plot is generated for the best-performing sample, visualizing how the model's accuracy improved over the 100 iterations.
+  </p>
   <img src="convergence_plot_sample.png" alt="Convergence Plot" width="600">
 
-  <h2>📊 Data Analysis</h2>
+  <h2>🔍 Data Summary</h2>
   <ul>
-    <li><strong>Dataset shape:</strong> 20000 rows, 16 features</li>
-    <li><strong>Missing values:</strong> None</li>
-    <li><strong>Class distribution:</strong> Evenly distributed A-Z</li>
+    <li><strong>Shape:</strong> 13,611 rows × 17 columns</li>
+    <li><strong>Target column:</strong> Class</li>
+    <li><strong>Missing Values:</strong> None</li>
+    <li><strong>Class Distribution:</strong> Reasonably balanced across 7 classes</li>
   </ul>
 
-  <h2>💾 Repository Contents</h2>
+  <h2>📁 Repository Contents</h2>
   <ul>
-    <li><code>svm_optimization.py</code> — full source code</li>
-    <li><code>svm_optimization_results.csv</code> — accuracy and parameters for 10 samples</li>
-    <li><code>convergence_plot_sample.png</code> — graph of accuracy over iterations</li>
-    <li><code>README.html</code> — this file</li>
+    <li><code>dry_bean_svm.py</code> — Python code for optimization</li>
+    <li><code>Dry_Bean_Dataset.csv</code> — Dataset file</li>
+    <li><code>dry_bean_svm_results.csv</code> — Table of results</li>
+    <li><code>convergence_plot_sample.png</code> — Accuracy vs. iteration plot</li>
+    <li><code>README.html</code> — This documentation</li>
   </ul>
 
   <h2>🚀 How to Run</h2>
-  <div class="code-block">
-    pip install pandas numpy scikit-learn matplotlib seaborn<br>
-    python svm_optimization.py
-  </div>
+  <pre>
+pip install pandas numpy matplotlib seaborn scikit-learn
+python dry_bean_svm.py
+  </pre>
 
   <h2>📬 Contact</h2>
-  <p>For questions, feel free to open an issue or contact via GitHub.</p>
+  <p>For any questions, feel free to open an issue or reach out via GitHub.</p>
 
 </body>
 </html>
-
