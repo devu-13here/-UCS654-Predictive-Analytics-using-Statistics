@@ -92,3 +92,7 @@ python dry_bean_svm.py
 
 </body>
 </html>
+
+![df_results](https://github.com/user-attachments/assets/0c34963b-b34a-4ca3-8004-21edd3869a0d)
+
+
