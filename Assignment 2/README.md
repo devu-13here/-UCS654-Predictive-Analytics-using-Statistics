@@ -59,7 +59,7 @@
     <pre>
     ├── Creditcard_data.csv
     ├── Assignment2_102216050.ipynb
-    ├── accuracy_matrix.png
+    ├── sampling_accuracy_table.png
     └── README.html
     </pre>
 
